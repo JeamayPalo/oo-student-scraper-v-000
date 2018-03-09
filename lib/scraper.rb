@@ -9,6 +9,8 @@ class Scraper
     doc = Nokogiri::HTML(html)
     students.each do |student|
       name = student.css(".student-name").text
+      location = student.css(".student-location").text 
+      profile = 
     end 
   end
 
