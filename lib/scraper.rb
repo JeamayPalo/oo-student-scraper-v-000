@@ -1,7 +1,7 @@
 class Scraper
 
    def self.scrape_index_page(index_url)
-    html = open(index_url) #=> index_url = "../fixtures/student-site/index.html"
+    html = open(index_url)
     list = Nokogiri::HTML(html)
 
     # This block returns a list of student names
