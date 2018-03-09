@@ -4,7 +4,7 @@ class Student
 
   @@all = []
 
-   def initialize(student_hash)
+  def initialize(student_hash)
     student_hash.each { |k, v| self.send(("#{k}="), v) }
     @@all << self
   end
