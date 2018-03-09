@@ -11,7 +11,6 @@ class Scraper
     students.each do |student|
       name = student.css(".student-name").text
       location = student.css(".student-location").text
-      # profile_url = student.attribute("href").value
       profile_url = "./fixtures/student-site/#{student.attribute("href").value}"
       student_list << {:name => name, :location => location, :profile_url => profile_url}
     end
