@@ -38,3 +38,4 @@ class Scraper
     end
     master_array
   end
+end
