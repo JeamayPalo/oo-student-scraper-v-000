@@ -10,7 +10,7 @@ class Scraper
     student_names.each do |item|
       student_names_array << item.text
     end
-    names_array
+    student_names_array
 
     # This block returns a list of locations.
     locations = list.css(".student-location")
