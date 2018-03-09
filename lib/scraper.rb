@@ -91,15 +91,15 @@ class Scraper
       end
     students_blog
 
-    out_put = {:twitter=>students_twitter[0],
+    output = {:twitter=>students_twitter[0],
                :linkedin=>students_linkedin[0],
                :github=>students_github[0],
                :profile_quote=>students_quote,
                :blog=>students_blog,
                :bio=> students_bio}
-    out_put.delete_if {|key, value| value == [] || value == nil}
+    output.delete_if {|key, value| value == [] || value == nil}
 
-    out_put
+    output
   end
   
 end 
