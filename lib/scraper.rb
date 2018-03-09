@@ -12,7 +12,7 @@ class Scraper
     end
     student_names_array
 
-    # This block returns a list of locations.
+# Student Locations
     locations = list.css(".student-location")
     location_array = []
     locations.each do |item|
