@@ -8,7 +8,7 @@ class Scraper
     html = open(index_url) 
     list = Nokogiri::HTML(html)
 
-    # This block returns a list of student names
+    # Student Names
     names = list.css(".student-name")
     names_array = []
     names.each do |item|
@@ -16,7 +16,7 @@ class Scraper
     end
     names_array
 
-    # This block returns a list of locations.
+    # Locations 
     locations = list.css(".student-location")
     location_array = []
     locations.each do |item|
