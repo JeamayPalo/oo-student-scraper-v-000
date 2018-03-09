@@ -20,7 +20,7 @@ class Scraper
     end
     location_array
 
-    # This block returns a list of student HTML pages.
+  # HTML Pages
     webpages = list.css(".student-card a[href]")
     webpage_array = []
     webpages.select do |item|
