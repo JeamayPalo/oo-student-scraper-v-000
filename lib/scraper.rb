@@ -5,18 +5,18 @@ require 'open-uri'
 class Scraper
 
    def self.scrape_index_page(index_url)
-    html = open(index_url)
+    html = open(index_url) #=> index_url = "../fixtures/student-site/index.html"
     list = Nokogiri::HTML(html)
 
-  # Student Names
-    student_names = list.css(".student-name")
+    # This block returns a list of student names
+    names = list.css(".student-name")
     names_array = []
-    student_names.each do |item|
+    names.each do |item|
       names_array << item.text
     end
     names_array
 
-  # Student Locations 
+    # This block returns a list of locations.
     locations = list.css(".student-location")
     location_array = []
     locations.each do |item|
@@ -24,13 +24,14 @@ class Scraper
     end
     location_array
 
-    # HTML Pages
+    # This block returns a list of student HTML pages.
     webpages = list.css(".student-card a[href]")
     webpage_array = []
     webpages.select do |item|
       webpage_array << item['href']
     end
     webpage_array
+
 
     master_array = []
     hash = {}
@@ -41,4 +42,4 @@ class Scraper
     end
     master_array
   end
-end
+end 
