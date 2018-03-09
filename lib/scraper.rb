@@ -7,7 +7,7 @@ class Scraper
   # Student Names
     student_names = list.css(".student-name")
     names_array = []
-    Student_names.each do |item|
+    student_names.each do |item|
       names_array << item.text
     end
     names_array
