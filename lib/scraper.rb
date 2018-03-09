@@ -28,7 +28,6 @@ class Scraper
     end
     webpage_array
 
-
     master_array = []
     hash = {}
     x = 0
