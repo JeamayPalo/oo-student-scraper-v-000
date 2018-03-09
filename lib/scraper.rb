@@ -1,14 +1,14 @@
 class Scraper
 
   def self.scrape_index_page(index_url)
-    html = open(index_url) #=> index_url = "../fixtures/student-site/index.html"
+    html = open(index_url) 
     list = Nokogiri::HTML(html)
 
-    # This block returns a list of student names
-    names = list.css(".student-name")
-    names_array = []
-    names.each do |item|
-      names_array << item.text
+# Students' Names
+    student_names = list.css(".student-name")
+    student_names_array = []
+    student_names.each do |item|
+      student_names_array << item.text
     end
     names_array
 
