@@ -5,14 +5,14 @@ class Scraper
     list = Nokogiri::HTML(html)
 
 # Students' Names
-    student_names = list.css(".student-name")
-    student_names_array = []
-    student_names.each do |item|
-      student_names_array << item.text
+    names = list.css(".student-name")
+    names_array = []
+    names.each do |item|
+    names_array << item.text
     end
-    student_names_array
+    names_array
 
-# Student Locations
+    # This block returns a list of locations.
     locations = list.css(".student-location")
     location_array = []
     locations.each do |item|
