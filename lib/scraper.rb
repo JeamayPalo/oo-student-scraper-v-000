@@ -5,9 +5,9 @@ class Scraper
     list = Nokogiri::HTML(html)
 
   # Student Names
-    names = list.css(".student-name")
+    student_names = list.css(".student-name")
     names_array = []
-    names.each do |item|
+    Student_names.each do |item|
       names_array << item.text
     end
     names_array
