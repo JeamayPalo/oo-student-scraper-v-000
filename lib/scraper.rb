@@ -11,6 +11,7 @@ class Scraper
       name = student.css(".student-name").text
       location = student.css(".student-location").text 
       profile = "./fixtures/student-site/#{student.attribute("href").value}"
+      student_list << 
     end 
   end
 
